@@ -1,0 +1,16 @@
+{
+  "root": "/",
+  "routes": {
+    "/": "index.html"
+  },
+  "errors": {
+    "notFound": ""
+  },
+  "main": {
+    "js": "main.js",
+    "css": "main.css"
+  },
+  "local": {
+    "port": 3000
+  }
+}
