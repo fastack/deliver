@@ -1,5 +1,6 @@
 module.exports = {
-    configure: require('./configure/configure.js'),
-    resolve: require('./resolve/resolve.js'),
-    route: require('./route/route.js')
+    configure: require('./src/configure/configure.js'),
+    resolve: require('./src/resolve/resolve.js'),
+    route: require('./src/route/route.js'),
+    notFound: require('./src/notFound/notFound.js')
 };
