@@ -13,10 +13,10 @@ module.exports = function(getFile) {
                 case 'file':
                     if (_.contains(files, routed.path)) {
                         getFile(routed.path, appId)
-                            .then(function(file) {
-                                res.end(file.contents, 'binary');
-                                next();
-                            });
+                        .then(function(file) {
+                            res.end(file.contents, 'binary');
+                            next();
+                        });
                     } else {
                         next();
                     }
