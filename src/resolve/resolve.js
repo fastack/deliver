@@ -14,9 +14,7 @@ module.exports = function(getFile) {
                     if (_.contains(files, routed.path)) {
                         getFile(routed.path, appId)
                         .then(function(file) {
-                            res.setHeader({
-                                'Content-Type': mime.lookup(routed.path)
-                            });
+                            res.setHeader('Content-Type', mime.lookup(routed.path));
                             res.end(file.contents, 'binary');
                             next();
                         });
