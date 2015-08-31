@@ -19,7 +19,7 @@ module.exports = function() {
         // first see if requested path is defined as a route
         for (var route in routes) {
             var file = routes[route];
-            if (mm.isMatch(path, route)) {
+            if (mm.isMatch('/'+path, route)) {
                 req.FASTACK.routed = {
                     type: 'file',
                     path: file
@@ -31,7 +31,7 @@ module.exports = function() {
         var redirects = config.redirects;
 
         for (var redirect in redirects) {
-            if (mm.isMatch(path, redirect)) {
+            if (mm.isMatch('/'+path, redirect)) {
                 req.FASTACK.routed = {
                     type: 'redirect',
                     code: config.code || 302,
