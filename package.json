@@ -2,7 +2,7 @@
   "name": "fastack-deliver-middleware",
   "description": "Fastack delivery server middleware",
   "repository": "git@github.com:fastack/delivery-middleware.git",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "dependencies": {
     "lodash": "^3.10.0",
     "micromatch": "^2.2.0",
