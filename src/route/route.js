@@ -7,7 +7,7 @@ module.exports = function() {
         var routes = config.routes;
         var path = req.url.split('?')[0].replace(/^\//g, '');
 
-        if (path === '') path = '/';
+        //if (path === '') path = '/';
 
         if (Path.extname(path) !== '') { // if request has file extension in it
             req.FASTACK.routed = {
