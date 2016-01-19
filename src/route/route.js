@@ -31,10 +31,14 @@ module.exports = function() {
         var redirects = config.redirects;
 
         for (var redirect in redirects) {
+            if (typeof redirect === 'object') {
+                redirect = redirect['location'];
+                var code = redirect['code'];
+            };
             if (mm.isMatch('/'+path, redirect)) {
                 req.FASTACK.routed = {
                     type: 'redirect',
-                    code: config.code || 302,
+                    code: code || 302,
                     path: redirects[redirect]
                 };
             }
