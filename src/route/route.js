@@ -34,7 +34,7 @@ module.exports = function() {
             var location, code;
             if (typeof redirects[redirect] === 'object') {
                 location = redirects[redirect]['location'];
-                code = redirect['code'];
+                code = redirects[redirect]['code'];
             } else {
                 location = redirects[redirect];
                 code = 302;
